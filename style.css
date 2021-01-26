@@ -1,0 +1,429 @@
+* {
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  margin: 0%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  text-align: justify;
+  tab-size: 1.2rem;
+}
+
+a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.dotted-hr {
+  border: 6px dotted greenyellow;
+  border-bottom: none;
+  margin: 20px auto;
+  width: 100px;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+/* Working with Navigation */
+.navbar {
+  background-color: aqua;
+  text-align: center;
+  padding: 1% 7%;
+}
+
+.nav-heading h1 {
+  color: red;
+  margin: 0;
+  padding: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.nav-menu a {
+  background-color: chartreuse;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 7px 0;
+}
+
+.nav-menu a:hover {
+  background-color: orangered;
+}
+
+.navbar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Working with Profile */
+
+.profile {
+  padding: 130px 10px;
+  text-align: center;
+  position: relative;
+}
+
+.profile-details h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 3rem;
+}
+
+.profile-details p {
+  font-family: "Montserrat", sans-serif;
+  width: 95%;
+  margin: 0 auto;
+  text-align: justify;
+  color: gray;
+}
+
+.top-weather-icon {
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  transition: transform 2s;
+}
+
+.top-weather-icon:hover {
+  transform: rotate(360deg);
+}
+
+.bottom-weather-icon {
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  left: 40px;
+  bottom: 5px;
+  transition: transform 2s;
+}
+
+.bottom-weather-icon:hover {
+  transform: rotate(360deg);
+}
+
+.profile::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Working with About */
+
+.about {
+  background-color: rosybrown;
+  color: white;
+  padding: 1% 7%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.about-images img {
+  border: 5px solid red;
+  border-radius: 50%;
+  height: 220px;
+  width: 200px;
+}
+
+.about-details p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: green;
+}
+
+.about-details p > a {
+  font-size: 1.2rem;
+  color: tomato;
+}
+
+.about-details p > a:hover {
+  font-size: 1.2rem;
+  color: yellow;
+}
+
+.btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  width: 100px;
+  font-size: 1rem;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn:hover {
+  background-color: brown;
+}
+.about-hr {
+}
+
+.about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Working with Skill */
+
+.skill {
+  padding: 1% 0%;
+}
+
+.card {
+  background-color: coral;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.3s;
+  /* height: 800px; */
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 5px black;
+}
+
+.card-icon {
+  text-align: center;
+}
+
+.card-icon img {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border: 3px solid forestgreen;
+  border-radius: 50%;
+}
+
+.card-heading h2 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-details {
+}
+
+.working-skill {
+}
+
+.educational-skill {
+}
+
+.programming-skill {
+}
+
+.skill-container {
+  padding-right: 45px;
+}
+
+.skill-container li {
+  list-style: none;
+  font-weight: bolder;
+  margin: 40px 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.skill-container li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: gray;
+  border-radius: 1000px;
+}
+
+.skill-container li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 10px;
+  top: calc(100% + 5px);
+  left: 0;
+  background-color: greenyellow;
+  border-radius: 1000px;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.skill-container li.html::after {
+  animation-name: html;
+}
+
+@keyframes html {
+  to {
+    width: 90%;
+  }
+}
+
+.skill-container li.css::after {
+  animation-name: css;
+}
+
+@keyframes css {
+  to {
+    width: 80%;
+  }
+}
+
+.skill-container li.bootstrap::after {
+  animation-name: bootstrap;
+}
+
+@keyframes bootstrap {
+  to {
+    width: 75%;
+  }
+}
+
+.skill-container li.javascript::after {
+  animation-name: javascript;
+}
+
+@keyframes javascript {
+  to {
+    width: 80%;
+  }
+}
+
+.skill-container li.nodejs::after {
+  animation-name: nodejs;
+}
+
+@keyframes nodejs {
+  to {
+    width: 70%;
+  }
+}
+
+.skill-container li.reactjs::after {
+  animation-name: reactjs;
+}
+
+@keyframes reactjs {
+  to {
+    width: 75%;
+  }
+}
+
+.skill::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Working with Contact */
+
+.contact {
+  padding: 1% 7%;
+  background-color: fuchsia;
+}
+
+.contact-heading {
+}
+.contact-details {
+  text-align: center;
+}
+
+.contact-details input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.contact {
+  text-align: center;
+}
+
+.btn-btn {
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 32px;
+  padding: 5px;
+  margin: 10px;
+  width: 50px;
+  background-color: gray;
+}
+
+.btn-btn:hover {
+  background-color: brown;
+}
+
+.contact::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Working with Footer */
+
+.footer {
+  background-color: gold;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.footer-menu a {
+  display: block;
+  color: black;
+  margin: 10px 0;
+}
+
+.footer-menu a:hover {
+  color: red;
+}
+
+.footer-details {
+  color: red;
+}
+
+.footer-details:hover {
+  color: black;
+}
+
+.footer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
